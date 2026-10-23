@@ -373,6 +373,7 @@ p { margin: 0; }
 .gal-item figcaption b { color: var(--p-accent); font-weight: 600; }
 .gal-phones { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: clamp(16px, 2.4vw, 32px); margin-top: clamp(28px, 4vw, 48px); }
 .pp-video { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); align-items: center; padding-bottom: clamp(56px, 8vw, 110px); }
+.pp-video.wide { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
 .pp-video .lbl { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--p-accent); }
 .pp-video p.big { font-family: var(--f-display); font-weight: 900; text-transform: uppercase; font-size: clamp(40px, 4.4vw, 64px); line-height: .9; margin-top: 12px; }
 .pp-next { display: block; width: 100%; appearance: none; border: 0; text-align: left; cursor: pointer; background: var(--n-bg); color: var(--n-ink); padding-block: clamp(56px, 8vw, 110px); margin-top: clamp(56px, 8vw, 110px); }
@@ -381,7 +382,7 @@ p { margin: 0; }
 .lightbox { position: fixed; inset: 0; z-index: 90; background: rgba(0, 0, 0, .88); display: grid; place-items: center; padding: 24px; cursor: zoom-out; }
 .lightbox img { max-height: 92vh; width: auto; }
 @media (max-width: 860px) {
-  .pp-body, .pp-video { grid-template-columns: minmax(0, 1fr); }
+  .pp-body, .pp-video, .pp-video.wide { grid-template-columns: minmax(0, 1fr); }
   .pp-meta { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pp-meta div:nth-child(3) { padding-left: 0; border-left: 0; }
   .gal { grid-template-columns: minmax(0, 1fr); }

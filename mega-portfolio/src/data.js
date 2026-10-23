@@ -65,6 +65,27 @@ import wyQ from './assets/shots/mine-m-3-question.webp';
 import wyYes from './assets/shots/mine-m-4-yes.webp';
 import wyDesk from './assets/shots/mine-d-question.webp';
 import wyVideo from './assets/mine.mp4';
+// Eye → Space (captured from the live site)
+import eyDBuild from './assets/shots/eye-d-build.webp';
+import eyDOpen from './assets/shots/eye-d-open.webp';
+import eyDLook from './assets/shots/eye-d-look.webp';
+import eyDIris from './assets/shots/eye-d-iris.webp';
+import eyDPortal from './assets/shots/eye-d-portal.webp';
+import eyDSpace from './assets/shots/eye-d-space.webp';
+import eyMBuild from './assets/shots/eye-m-build.webp';
+import eyMOpen from './assets/shots/eye-m-open.webp';
+import eyMIris from './assets/shots/eye-m-iris.webp';
+import eyMPortal from './assets/shots/eye-m-portal.webp';
+import eyMSpace from './assets/shots/eye-m-space.webp';
+import eyVideo from './assets/eye.mp4';
+// Burn the World (captured from the live site)
+import cdMatch from './assets/shots/candle-d-match.webp';
+import cdLight from './assets/shots/candle-d-light.webp';
+import cdLit from './assets/shots/candle-d-lit.webp';
+import cdFall from './assets/shots/candle-d-fall.webp';
+import cdSpread from './assets/shots/candle-d-spread.webp';
+import cdFire from './assets/shots/candle-d-fire.webp';
+import cdVideo from './assets/candle.mp4';
 
 export const ME = {
   name: 'Mega Chaudhary',
@@ -76,12 +97,12 @@ export const ME = {
   github: 'https://github.com/mega-chaudhary',
   status: 'Open to UI/UX internships',
   intro:
-    'I design clean, user-first interfaces in Figma, then build them into real products with AI tools. Academic portals, a flower-shop platform, a safety app and small interactive gifts.',
+    'I design clean, user-first interfaces in Figma, then build them into real products with AI tools. Academic portals, a flower-shop platform, a safety app, small interactive gifts and generative ASCII art.',
 };
 
 export const STATS = [
-  { value: '6', label: 'Projects designed' },
-  { value: '4', label: 'Built and running' },
+  { value: '8', label: 'Projects designed' },
+  { value: '6', label: 'Built and running' },
   { value: '3', label: 'Portals in FacultyHub' },
 ];
 
@@ -130,6 +151,77 @@ export const ABOUT_FILES = [
   gallery      -> screenshots shown on the project page
 */
 export const PROJECTS = [
+  {
+    id: 'eye-space',
+    title: 'Eye → Space',
+    kicker: 'My eye drawn in text, diving into space',
+    status: 'Live',
+    role: 'Design + build',
+    type: 'Generative art',
+    stack: ['HTML', 'CSS', 'JavaScript', 'Canvas', 'GitHub Pages'],
+    theme: { bg: '#050304', bg2: '#1a0c08', ink: '#ecdcd0', accent: '#ff6fa8', soft: '#8a7166', dark: true },
+    summary:
+      'A photo of my own eye, redrawn every frame in coloured text characters. Rows of text flicker in, the eyelid forms, the eye opens, blinks and looks around, then the camera dives through the pupil into a starfield with a pink planet.',
+    points: [
+      'The photo is read pixel by pixel: each character cell samples its brightness and picks a matching glyph, from dense @#$Q to light .:/',
+      'Every cell is coloured by what it shows: skin, the white of the eye, or iris fibres drawn with maths.',
+      'A 20-second story in four acts (build, blink, zoom, space) with a timeline you can drag, plus pause and replay.',
+      'Plain HTML, CSS and JavaScript with no libraries. The photo is embedded, so it even runs offline.',
+    ],
+    cover: { kind: 'browser', src: eyDOpen, url: 'mega-chaudhary.github.io/eyessss' },
+    video: { src: eyVideo, poster: eyMOpen },
+    gallery: [
+      { src: eyDBuild, cap: 'Rows of text flicker in', kind: 'browser' },
+      { src: eyDOpen, cap: 'The eye opens', kind: 'browser' },
+      { src: eyDLook, cap: 'Looking around', kind: 'browser' },
+      { src: eyDIris, cap: 'Zooming into the iris', kind: 'browser' },
+      { src: eyDPortal, cap: 'Through the pupil', kind: 'browser' },
+      { src: eyDSpace, cap: 'The pink planet', kind: 'browser' },
+      { src: eyMBuild, cap: 'Mobile: building', kind: 'phone' },
+      { src: eyMOpen, cap: 'Mobile: the eye', kind: 'phone' },
+      { src: eyMIris, cap: 'Mobile: the iris', kind: 'phone' },
+      { src: eyMPortal, cap: 'Mobile: the portal', kind: 'phone' },
+      { src: eyMSpace, cap: 'Mobile: space', kind: 'phone' },
+    ],
+    note: 'Captured from the live site.',
+    links: [
+      { label: 'Open live site', href: 'https://mega-chaudhary.github.io/eyessss/' },
+      { label: 'View the code', href: 'https://github.com/mega-chaudhary/eyessss' },
+    ],
+  },
+  {
+    id: 'burn-the-world',
+    title: 'Burn the World',
+    kicker: 'An ASCII candle that sets the floor on fire',
+    status: 'Live',
+    role: 'Design + build',
+    type: 'Generative art',
+    stack: ['JavaScript', 'Canvas', 'Python', 'NumPy', 'tkinter', 'GitHub Pages'],
+    theme: { bg: '#070302', bg2: '#1f0c04', ink: '#ffe9d2', accent: '#ff7a1a', soft: '#a07a62', dark: true },
+    summary:
+      'A match strikes in the dark and lights a candle. The flame grows, the candle tips over, and the fire races across the floor until the whole screen burns, all drawn in coloured ASCII characters.',
+    points: [
+      'Built twice: a Python desktop version (tkinter + NumPy) and a JavaScript canvas version that runs in the browser.',
+      'Flames are tear-drop shapes warped by scrolling noise. Brightness picks the character, heat blends the colour from deep red to white.',
+      'Real lighting: the match and flame light up the candle, the floor and the dark around them.',
+      'The fire spreads outward from where the wick hits the floor, throwing sparks and rising embers.',
+    ],
+    cover: { kind: 'browser', src: cdFire, url: 'mega-chaudhary.github.io/burn-the-world-html' },
+    video: { src: cdVideo, poster: cdLit, kind: 'browser' },
+    gallery: [
+      { src: cdMatch, cap: 'The match strikes', kind: 'browser' },
+      { src: cdLight, cap: 'Lighting the wick', kind: 'browser' },
+      { src: cdLit, cap: 'The candle burns', kind: 'browser' },
+      { src: cdFall, cap: 'It tips over', kind: 'browser' },
+      { src: cdSpread, cap: 'The floor catches', kind: 'browser' },
+      { src: cdFire, cap: 'Everything burns', kind: 'browser' },
+    ],
+    note: 'Captured from the live site.',
+    links: [
+      { label: 'Open live site', href: 'https://mega-chaudhary.github.io/burn-the-world-html/' },
+      { label: 'View the code', href: 'https://github.com/mega-chaudhary/burn-the-world-html' },
+    ],
+  },
   {
     id: 'facultyhub',
     title: 'FacultyHub',
@@ -344,7 +436,7 @@ export const KEYS = [
   { label: 'three', sub: 'code', group: 'dark', used: 'three.js and React Three Fiber for Particle Heart and this site.' },
   { label: 'HTML', sub: 'code', group: 'dark', used: 'The base of every page I ship.' },
   { label: 'CSS', sub: 'code', group: 'dark', used: 'Layout, motion and theming.' },
-  { label: 'JS', sub: 'code', group: 'dark', used: 'Interactions and canvas animation, like the heart in Will You Be Mine.' },
+  { label: 'JS', sub: 'code', group: 'dark', used: 'Interactions and canvas animation, like the heart in Will You Be Mine and the ASCII eye and candle.' },
   { label: 'PHP', sub: 'code', group: 'dark', used: 'FacultyHub’s three portals and Memora’s partner portal.' },
   { label: 'MySQL', sub: 'data', group: 'dark', used: 'Databases for FacultyHub and Memora.' },
   { label: 'Git', sub: 'ship', group: 'accent', used: 'GitHub and GitHub Pages for hosting live sites.' },

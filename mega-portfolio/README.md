@@ -5,7 +5,7 @@ React + three.js portfolio with light and dark themes.
 - Hero: your real project screens floating in 3D, a pixel-scan portrait and Figma-style live cursors
 - About: an editor window; location.md draws Nepal as a pixel map made from your photo
 - Work: a 3D carousel + index; each project opens a full case-study page in that project's own colours,
-  with real screenshots (FacultyHub, Memora, Raksha, Higanbana, Particle Heart, Will You Be Mine)
+  with real screenshots (Eye → Space, Burn the World, FacultyHub, Memora, Raksha, Higanbana, Particle Heart, Will You Be Mine)
 - Skills: a realistic 3D macropad (tapered keycaps, aluminium case, OLED, knob, click sound)
 - Contact: a dotted 3D globe with Nepal highlighted
 

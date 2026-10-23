@@ -85,8 +85,10 @@ export default function ProjectPage({ index, onClose, onIndex }) {
           </div>
 
           {p.video && (
-            <div className="wrap pp-video">
-              <Phone video={p.video.src} poster={p.video.poster} />
+            <div className={`wrap pp-video ${p.video.kind === 'browser' ? 'wide' : ''}`}>
+              {p.video.kind === 'browser'
+                ? <Browser video={p.video.src} poster={p.video.poster} url={p.cover.url} dark={p.theme.dark} />
+                : <Phone video={p.video.src} poster={p.video.poster} />}
               <div>
                 <p className="lbl">Screen recording</p>
                 <p className="big">See it move.</p>
